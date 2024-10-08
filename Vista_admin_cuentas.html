@@ -27,32 +27,55 @@
         </div>
     </header>
 
-    <!-- Lista de usuarios registrados -->
+   
     <section class="usuarios-registrados">
         <h3 class="titulo">Usuarios registrados</h3>
         <ul class="lista-usuarios">
-            <li>
+            <li data-usuario="Juan Pérez">
                 <img src="imagenes/gato.png" alt="Usuario 1" class="img-usuario">
                 Juan Pérez
             </li>
-            <li>
+            <li data-usuario="María Gómez">
                 <img src="imagenes/gato.png" alt="Usuario 2" class="img-usuario">
                 María Gómez
             </li>
-            <li>
+            <li data-usuario="Carlos Díaz">
                 <img src="imagenes/gato.png" alt="Usuario 3" class="img-usuario">
                 Carlos Díaz
             </li>
-            <li>
+            <li data-usuario="Sofía Ruiz">
                 <img src="imagenes/gato.png" alt="Usuario 4" class="img-usuario">
                 Sofía Ruiz
             </li>
-            <li>
+            <li data-usuario="Andrés Morales">
                 <img src="imagenes/gato.png" alt="Usuario 5" class="img-usuario">
                 Andrés Morales
             </li>
         </ul>
     </section>
 
+    <!-- Opciones de usuario -->
+    <div id="opciones-usuario" class="opciones-usuario" style="display: none;">
+        <h4>Opciones</h4>
+        <button id="configuracion-btn">configuración de la cuenta</button>
+        <button id="categorias-btn">Explorar Catálogo</button>
+    </div>
+
+     <div id="modal-configuracion" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Configuración de la cuenta</h2>
+            <form id="form-configuracion">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nuevo nombre">
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" placeholder="Nueva contraseña">
+                <button type="submit">Guardar cambios</button>
+                <button type="button" id="cerrar-sesion-btn">Cerrar sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
